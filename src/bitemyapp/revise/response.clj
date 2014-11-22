@@ -32,7 +32,7 @@
   (contains? #{0.0 0} (mod n 1)))
 
 (defn maybe-int [n]
-  (or (and (ends-in-0 n) (int n)) n))
+  (or (and (ends-in-0 n) (long n)) n))
 
 (defmethod response
   :r-num
