@@ -31,13 +31,13 @@
 (defn ends-in-0 [n]
   (contains? #{0.0 0} (mod n 1)))
 
-(defn maybe-int [n]
+(defn maybe-long [n]
   (or (and (ends-in-0 n) (long n)) n))
 
 (defmethod response
   :r-num
   [m]
-  (maybe-int (:r-num m)))
+  (maybe-long (:r-num m)))
 
 (defmethod response
   :r-bool
